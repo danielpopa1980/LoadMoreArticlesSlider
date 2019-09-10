@@ -1,0 +1,107 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Javascript Playground</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=1.1">  
+
+</head>
+
+<body>
+	<div class="slider">
+		<ul id="slides"></ul>
+		<div class="thumbsWrapper"> 
+			<div class="header">Aktuelle Beiträge</div>
+			<div class="thumbsMask">
+				<div id="thumbs"></div>
+			</div>
+			<div class="load">neuere Beiträge laden</div>
+		</div>
+	</div>
+	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script>
+	
+$(document).ready(function() {
+	"use strict";
+		/*
+		$.getJSON("test.json", function(data) {
+			console.log(data);
+
+		});
+		*/
+
+		$.ajax({
+			url: 'data.json',
+			dataType: 'json',
+			type: 'get',
+			cache: false,
+			success: function(data) { console.log('data');console.log(data.articles);
+			/*var d = new Date();
+			var n = d.getTime();*/
+/*
+				$(data.articles).each(function(index, value) {console.log('success');
+ 
+					$('#slides').append(
+						'<li class="container">'+ '<img src="'+this.imageURL+'" title="'+this.title+'">' + '<div class="titleWrapper">' + '<span class="category">' +this.category+ '</span>' + '<span class="title">' +this.title+ '</span>' + '<div class="dateAuthorWrapper">' + '<span class="date">' +this.date+ '</span>' + '<span class="author">' +this.author+ '</span>' +  '</div>' + '<span class="readMore">' + '<a href="'+this.postURL+'" target="_blank">' + 'Weiter Lesen' + '</a>' + '</span>' +  '</div>' + '</li>'  
+					);	
+					$('#thumbs').append(
+						'<div class="thumb">'+ '<span class="image">' + '<img src="'+this.imageURL+'" title="'+this.title+'">' + '</span>' + '<span class="category">' +this.category+ '</span>' + '<span class="title">' +this.title+ '</span>' + '<span class="date">' +this.date+ '</span>' + '</div>' 
+					);						
+						
+				});*/
+				/*var n2 = d.getTime();console.log(n2);console.log(n);*/
+				//////////////////////////////Ali code/////////////////////////////
+				var i =0, iArrLen = data.articles.length, slideItem="", thumbItem = "";
+				for (i = 0; i < iArrLen; i++){  
+
+					if (data.articles[i].category === "Adventure", "PC Games" ) { 
+						console.log(data.articles[i].category);
+						slideItem = '<li class="container">'+ '<img src="'+data.articles[i].imageURL+'" title="'+data.articles[i].title+'">' + '<div class="titleWrapper">' + '<span class="category">' +data.articles[i].category+ '</span>' + '<span class="title">' +data.articles[i].title+ '</span>' + '<div class="dateAuthorWrapper">' + '<span class="date">' +data.articles[i].date+ '</span>' + '<span class="author">' +data.articles[i].author+ '</span>' +  '</div>' + '<span class="readMore">' + '<a href="'+data.articles[i].postURL+'" target="_blank">' + 'Weiter Lesen' + '</a>' + '</span>' +  '</div>' + '</li>' ;
+						$('#slides').append(slideItem);
+
+						thumbItem = '<div class="thumb">'+ '<span class="image">' + '<img src="'+data.articles[i].imageURL+'" title="'+data.articles[i].title+'">' + '</span>' + '<span class="category">' +data.articles[i].category+ '</span>' + '<span class="title">' +data.articles[i].title+ '</span>' + '<span class="date">' +data.articles[i].date+ '</span>' + '</div>';
+						$('#thumbs').append(thumbItem);
+					}
+
+				}
+				////////////////////////////////////////////////////////////////////
+
+				// On thumb click add class to its equal index for Slides
+				$('.container:first-child').addClass('active');
+	
+				$(function() {
+				    $('.thumb').click(function() {
+						$('#slides .container').eq($(this).index()).addClass('active').siblings().removeClass('active');
+				    });
+				});
+
+				// "Load more articles" button click select the first 3 items from each list (thumbs and slides)
+				// and append them to the end of each corresponding list 
+				function removeElements() {
+					$("#slides").contents().slice(0, 4).removeClass('active').appendTo("#slides");
+					$("#thumbs").contents().slice(0, 4).appendTo("#thumbs"); 
+					$('#slides .container:first-child').addClass('active'); 
+				} 
+				$( ".load" ).click(removeElements); 
+
+			}
+
+		});
+
+
+	});
+
+
+</script>
+
+
+</body>
+</html>

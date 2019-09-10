@@ -1,0 +1,52 @@
+{
+    "articles": [
+        {
+            "imageURL": "testImg1.jpg?version=01",
+            "category": "PC Games", 
+            "title": "Game of Thrones: GoT-Charaktere trällern - ob sie selbst dran glauben?",
+            "author": "Daniel Popa",
+            "date": "July 27, 2018",
+            "postURL": "https://www.buffed.de/World-of-Warcraft-Spiel-42971/News/Classic-Stufe-60-Charakterboost-Battle-for-Azeroth-Aktion-Leak-Hinweis-1330965/"
+        },
+        {
+            "imageURL": "testImg2.jpg?version=01", 
+            "category": "PC Games",
+            "title": "Destiny 2: Coole Trailer von der Gamescom machen Lust auf Festung der Schatten",
+            "author": "Jesus Christ",
+            "date": "August 30, 1996",
+            "postURL": "https://www.buffed.de/World-of-Warcraft-Spiel-42971/News/Classic-Stufe-60-Charakterboost-Battle-for-Azeroth-Aktion-Leak-Hinweis-1330965/"
+        },
+        {
+            "imageURL": "testImg3.jpg?version=01", 
+            "category": "Playstation",
+            "title": "WoW Classic: Allgemeine Tipps für den schnellen Einstieg ins Abenteuer",
+            "author": "Moses The great",
+            "date": "September 12, 2019",
+            "postURL": "https://www.buffed.de/World-of-Warcraft-Spiel-42971/News/Classic-Stufe-60-Charakterboost-Battle-for-Azeroth-Aktion-Leak-Hinweis-1330965/"
+        },
+        {
+            "imageURL": "testImg4.jpg?version=01", 
+            "category": "Movie", 
+            "title": "WoW: In Classic Stufe 60 bringt BfA + Charakterboost - Aktions-Leak?",
+            "author": "Christ the Redeemer",
+            "date": "Oktober 14, 2019",
+            "postURL": "https://www.buffed.de/World-of-Warcraft-Spiel-42971/News/Classic-Stufe-60-Charakterboost-Battle-for-Azeroth-Aktion-Leak-Hinweis-1330965/"
+        },
+        {
+            "imageURL": "testImg5.jpg?version=01",  
+            "category": "Movie Trailers",
+            "title": "Destiny 2: Coole Trailer von der Gamescom machen Lust auf Festung der Schatten",
+            "author": "Jesus Christ",
+            "date": "August 30, 1996",
+            "postURL": "https://www.buffed.de/World-of-Warcraft-Spiel-42971/News/Classic-Stufe-60-Charakterboost-Battle-for-Azeroth-Aktion-Leak-Hinweis-1330965/"
+        },
+        {
+            "imageURL": "testImg6.jpg?version=01",   
+            "category": "Adventure",
+            "title": "WoW Classic: Allgemeine Tipps für den schnellen Einstieg ins Abenteuer",
+            "author": "Moses The great",
+            "date": "September 12, 2019",
+            "postURL": "https://www.buffed.de/World-of-Warcraft-Spiel-42971/News/Classic-Stufe-60-Charakterboost-Battle-for-Azeroth-Aktion-Leak-Hinweis-1330965/"
+        } 
+    ]
+}
